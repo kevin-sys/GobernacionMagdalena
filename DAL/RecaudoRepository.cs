@@ -25,9 +25,8 @@ namespace DAL
 
             using (var command = _connection.CreateCommand())
             {
-             //   command.CommandText = "BULK INSERT DetalleOrden FROM 'C:\\Users\\Gomez\\source\\repos\\KeedSupport UI\\KeedSupport UI\\KeedSupport UI\\KeedSupport UI\\bin\\Debug\\Detalle.txt' WITH (FIELDTERMINATOR = ';' , ROWTERMINATOR = '\n')";
 
-                command.CommandText = "BULK INSERT DetalleOrden FROM 'C:\\Users\\Gomez\\source\\repos\\Gobernacion del Magdalena\\Recaudo.txt' WITH (FIELDTERMINATOR = ';' , ROWTERMINATOR = '\n')";
+                command.CommandText = "BULK INSERT Recaudo FROM 'C:\\Users\\Gomez\\source\\repos\\Gobernacion del Magdalena\\Recaudo.txt' WITH (FIELDTERMINATOR = ';' , ROWTERMINATOR = '\n')";
                 command.CommandType = CommandType.Text;
 
                 command.ExecuteNonQuery();

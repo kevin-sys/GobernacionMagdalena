@@ -42,6 +42,7 @@
             this.BtnSalvar.TabIndex = 0;
             this.BtnSalvar.Text = "CARGAR ARCHIVO";
             this.BtnSalvar.UseVisualStyleBackColor = true;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
             // 
             // TxtNitAgente
             // 
@@ -81,6 +82,7 @@
             this.Controls.Add(this.BtnSalvar);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
