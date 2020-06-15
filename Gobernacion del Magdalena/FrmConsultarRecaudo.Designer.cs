@@ -148,6 +148,7 @@
             this.CmbEstampilla.Name = "CmbEstampilla";
             this.CmbEstampilla.Size = new System.Drawing.Size(121, 21);
             this.CmbEstampilla.TabIndex = 9;
+            this.CmbEstampilla.SelectedIndexChanged += new System.EventHandler(this.CmbEstampilla_SelectedIndexChanged);
             // 
             // label4
             // 

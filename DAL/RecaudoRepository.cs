@@ -40,7 +40,6 @@ namespace DAL
         public List<Recaudo>ConsultarTodos()
         {
             SqlDataReader dataReader;
-            List<Recaudo> recaudos = new List<Recaudo>();
             using (var command = _connection.CreateCommand())
             {
                 command.CommandText = "Select * from Recaudo";
@@ -113,6 +112,10 @@ namespace DAL
         }
 
         public decimal ValorTotalAdultoMayor()
+        {
+            return recaudos.Where(p => p.TipoEstampilla.Equals("Adulto Mayor") && p.ValorImpuesto.Equals(p.ValorImpuesto)).Sum(p => p.ValorImpuesto);
+        }
+        public decimal ValorTotalTodos()
         {
             return recaudos.Where(p => p.TipoEstampilla.Equals("Adulto Mayor") && p.ValorImpuesto.Equals(p.ValorImpuesto)).Sum(p => p.ValorImpuesto);
         }
