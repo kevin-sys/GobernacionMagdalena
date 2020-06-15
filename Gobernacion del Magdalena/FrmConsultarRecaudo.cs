@@ -39,10 +39,21 @@ namespace Gobernacion_del_Magdalena
             if (CmbEstampilla.Text.Equals("Adulto Mayor"))
             {
                 TxtTotal.Text = service.ValorTotalAdultoMayor().ToString();
-
-
             }
 
+            if (CmbEstampilla.Text.Equals("Pro Cultura"))
+            {
+                TxtTotal.Text = service.ValorTotalProCultura().ToString();
+            }
+
+            if (CmbEstampilla.Text.Equals("Todos"))
+            {
+                TxtTotal.Text = service.ValorTotalTodos().ToString();
+            }
+            if (CmbEstampilla.Text.Equals("Pro-UPC"))
+            {
+                TxtTotal.Text = service.ValorTotalAdultoMayor().ToString();
+            }
         }
     }
 }

@@ -117,9 +117,16 @@ namespace DAL
         }
         public decimal ValorTotalTodos()
         {
-            return recaudos.Where(p => p.TipoEstampilla.Equals("Adulto Mayor") && p.ValorImpuesto.Equals(p.ValorImpuesto)).Sum(p => p.ValorImpuesto);
+            return recaudos.Where(p => p.TipoEstampilla.Equals("Todos") && p.ValorImpuesto.Equals(p.ValorImpuesto)).Sum(p => p.ValorImpuesto);
         }
-
+        public decimal ValorTotalProCultura()
+        {
+            return recaudos.Where(p => p.TipoEstampilla.Equals("Pro Cultura") && p.ValorImpuesto.Equals(p.ValorImpuesto)).Sum(p => p.ValorImpuesto);
+        }
+        public decimal ValorTotalProUpc()
+        {
+            return recaudos.Where(p => p.TipoEstampilla.Equals("Pro-UPC") && p.ValorImpuesto.Equals(p.ValorImpuesto)).Sum(p => p.ValorImpuesto);
+        }
     }
 }
 

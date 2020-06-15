@@ -54,6 +54,20 @@ namespace BLL
         {
             return repository.ValorTotalAdultoMayor();
         }
+
+        public decimal ValorTotalTodos()
+        {
+            return repository.ValorTotalTodos();
+        }
+        public decimal ValorTotalProCultura()
+        {
+            return repository.ValorTotalProCultura();
+        }
+        public decimal ValorTotalProUPC()
+        {
+            return repository.ValorTotalProUpc();
+        }
+
         public List<Recaudo> ConsultarTodos()
         {
             conexion.Open();
