@@ -111,6 +111,12 @@ namespace DAL
             }
             return null;
         }
+
+        public decimal ValorTotalAdultoMayor()
+        {
+            return recaudos.Where(p => p.TipoEstampilla.Equals("Adulto Mayor") && p.ValorImpuesto.Equals(p.ValorImpuesto)).Sum(p => p.ValorImpuesto);
+        }
+
     }
 }
 

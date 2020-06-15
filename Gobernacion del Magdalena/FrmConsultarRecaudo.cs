@@ -28,5 +28,11 @@ namespace Gobernacion_del_Magdalena
             DgvRecaudo.DataSource = recaudos;
         }
         List<Recaudo> recaudos = new List<Recaudo>();
+
+        private void BtnTotal_Click(object sender, EventArgs e)
+        {
+            TxtTotal.Text = service.ValorTotalAdultoMayor().ToString();
+
+        }
     }
 }

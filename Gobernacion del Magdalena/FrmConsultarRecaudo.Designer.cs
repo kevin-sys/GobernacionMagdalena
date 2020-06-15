@@ -34,6 +34,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.BtnConsultar = new System.Windows.Forms.Button();
+            this.TxtTotal = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.BtnTotal = new System.Windows.Forms.Button();
+            this.CmbEstampilla = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DgvRecaudo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,18 +106,68 @@
             // 
             // BtnConsultar
             // 
-            this.BtnConsultar.Location = new System.Drawing.Point(438, 59);
+            this.BtnConsultar.Location = new System.Drawing.Point(672, 29);
             this.BtnConsultar.Name = "BtnConsultar";
             this.BtnConsultar.Size = new System.Drawing.Size(95, 23);
             this.BtnConsultar.TabIndex = 5;
             this.BtnConsultar.Text = "CONSULTAR";
             this.BtnConsultar.UseVisualStyleBackColor = true;
             // 
+            // TxtTotal
+            // 
+            this.TxtTotal.Location = new System.Drawing.Point(202, 301);
+            this.TxtTotal.Name = "TxtTotal";
+            this.TxtTotal.Size = new System.Drawing.Size(100, 20);
+            this.TxtTotal.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(111, 304);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Total recaudado";
+            // 
+            // BtnTotal
+            // 
+            this.BtnTotal.Location = new System.Drawing.Point(311, 298);
+            this.BtnTotal.Name = "BtnTotal";
+            this.BtnTotal.Size = new System.Drawing.Size(95, 23);
+            this.BtnTotal.TabIndex = 8;
+            this.BtnTotal.Text = "TOTAL";
+            this.BtnTotal.UseVisualStyleBackColor = true;
+            this.BtnTotal.Click += new System.EventHandler(this.BtnTotal_Click);
+            // 
+            // CmbEstampilla
+            // 
+            this.CmbEstampilla.FormattingEnabled = true;
+            this.CmbEstampilla.Items.AddRange(new object[] {
+            "Adulto Mayor"});
+            this.CmbEstampilla.Location = new System.Drawing.Point(434, 59);
+            this.CmbEstampilla.Name = "CmbEstampilla";
+            this.CmbEstampilla.Size = new System.Drawing.Size(121, 21);
+            this.CmbEstampilla.TabIndex = 9;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(431, 34);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(101, 13);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "TIPO ESTAMPILLA";
+            // 
             // FrmConsultarRecaudo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.CmbEstampilla);
+            this.Controls.Add(this.BtnTotal);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TxtTotal);
             this.Controls.Add(this.BtnConsultar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -135,5 +190,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BtnConsultar;
+        private System.Windows.Forms.TextBox TxtTotal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button BtnTotal;
+        private System.Windows.Forms.ComboBox CmbEstampilla;
+        private System.Windows.Forms.Label label4;
     }
 }

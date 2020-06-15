@@ -50,7 +50,10 @@ namespace BLL
                 return null;
             }
         }
-
+        public decimal ValorTotalAdultoMayor()
+        {
+            return repository.ValorTotalAdultoMayor();
+        }
         public List<Recaudo> ConsultarTodos()
         {
             conexion.Open();
