@@ -36,5 +36,29 @@ namespace Gobernacion_del_Magdalena
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            string nit = TxtNitAgente.Text.Trim();
+            if (nit != null)
+            {
+                Recaudo recaudo = service.Buscar(nit);
+
+
+                if (recaudo != null)
+                {
+
+                    MessageBox.Show($"SE ENCONTRO NIT");
+
+                }
+                else
+                {
+                    MessageBox.Show($"NO SE ENCONTRO NIT");
+
+                }
+            }
+        }
     }
 }

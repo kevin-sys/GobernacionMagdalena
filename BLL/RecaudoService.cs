@@ -38,5 +38,18 @@ namespace BLL
             finally { conexion.Close(); }
 
         }
+        public Recaudo Buscar(string nit)
+        {
+            try
+            {
+                return repository.Buscar(nit);
+            }
+            catch (Exception e)
+            {
+                string mensaje = " ERROR" + e.Message;
+                return null;
+            }
+        }
+
     }
 }

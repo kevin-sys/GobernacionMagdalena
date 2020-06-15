@@ -15,6 +15,9 @@ namespace Entity
         public decimal ValorImpuesto { get; set; }
         public string IdentificacionContratista { get; set; }
         public string NombreContratista { get; set; }
-
+        public override string ToString()
+        {
+            return $"{NitAgenteRecaudador};{MesReporte};{AñoReporte};{TipoEstampilla};{ValorImpuesto};{IdentificacionContratista};{NombreContratista}";
+        }
     }
 }
