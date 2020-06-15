@@ -37,8 +37,42 @@ namespace DAL
 
         }
 
+        public List<Recaudo>ConsultarTodos()
+        {
+            SqlDataReader dataReader;
+            List<Recaudo> recaudos = new List<Recaudo>();
+            using (var command = _connection.CreateCommand())
+            {
+                command.CommandText = "Select * from Recaudo";
+                dataReader = command.ExecuteReader();
+                if (dataReader.HasRows)
+                {
+                    while (dataReader.Read())
+                    {
+                        Recaudo recaudo = Mapear(dataReader);
+                        recaudos.Add(recaudo);
+                    }
+                }
+            }
+            return recaudos;
+        }
 
-       
+        private Recaudo Mapear(SqlDataReader dataReader)
+        {
+            if (!dataReader.HasRows) return null;
+            Recaudo recaudo = new Recaudo();
+            recaudo.NitAgenteRecaudador = (string)dataReader["NitAgenteRecaudador"];
+            recaudo.MesReporte = (int)dataReader["MesReporte"];
+            recaudo.AñoReporte = (int)dataReader["AñoReporte"];
+            recaudo.TipoEstampilla = (string)dataReader["TipoEstampilla"];
+            recaudo.ValorImpuesto = (decimal)dataReader["ValorImpuesto"];
+            recaudo.IdentificacionContratista = (string)dataReader["IdentificacionContratista"];
+            recaudo.NombreContratista = (string)dataReader["NombreContratista"];
+
+
+            return recaudo;
+        }
+
         public List<Recaudo> Consultar()
         {
             recaudos.Clear();

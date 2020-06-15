@@ -60,5 +60,12 @@ namespace Gobernacion_del_Magdalena
                 }
             }
         }
+
+        private void BtnConsultar_Click(object sender, EventArgs e)
+        {
+            FrmConsultarRecaudo frmConsultar = new FrmConsultarRecaudo();
+            frmConsultar.Show();
+
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace BLL
     {
         private readonly ConnectionManager conexion;
         private readonly RecaudoRepository repository;
-
+        List<Recaudo> recaudos;
         public RecaudoService(string connectionString)
         {
             conexion = new ConnectionManager(connectionString);
@@ -49,6 +49,15 @@ namespace BLL
                 string mensaje = " ERROR" + e.Message;
                 return null;
             }
+        }
+
+        public List<Recaudo> ConsultarTodos()
+        {
+            conexion.Open();
+            recaudos = new List<Recaudo>();
+            recaudos = repository.ConsultarTodos();
+            conexion.Close();
+            return recaudos;
         }
 
     }
