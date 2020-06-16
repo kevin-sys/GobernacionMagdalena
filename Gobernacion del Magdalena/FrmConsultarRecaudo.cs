@@ -52,7 +52,7 @@ namespace Gobernacion_del_Magdalena
             }
             if (CmbEstampilla.Text.Equals("Pro-UPC"))
             {
-                TxtTotal.Text = service.ValorTotalAdultoMayor().ToString();
+                TxtTotal.Text = service.ValorTotalProUPC().ToString();
             }
         }
     }

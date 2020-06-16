@@ -55,6 +55,12 @@ namespace BLL
             return repository.ValorTotalAdultoMayor();
         }
 
+
+        //public  List<Recaudo> ListarAdultoMayor()
+        //{
+        //    return repository.ListarAdultoMayor();
+        //}
+
         public decimal ValorTotalTodos()
         {
             return repository.ValorTotalTodos();

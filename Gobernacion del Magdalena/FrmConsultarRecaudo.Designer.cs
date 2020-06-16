@@ -143,7 +143,9 @@
             // 
             this.CmbEstampilla.FormattingEnabled = true;
             this.CmbEstampilla.Items.AddRange(new object[] {
-            "Adulto Mayor"});
+            "Adulto Mayor",
+            "Pro Cultura",
+            "Pro-UPC"});
             this.CmbEstampilla.Location = new System.Drawing.Point(434, 59);
             this.CmbEstampilla.Name = "CmbEstampilla";
             this.CmbEstampilla.Size = new System.Drawing.Size(121, 21);
